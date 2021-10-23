@@ -8,12 +8,7 @@ on:
   workflow_dispatch:
 jobs:
   release:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-
+    runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
@@ -28,8 +23,14 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install dependencies && Build
+      - name: Install && Build
         working-directory: ./
         run: |
           npm install
           npm run build
+      - name: Deploy GitHubPage
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist
