@@ -45,9 +45,9 @@ templateParameters.origin = JSON.stringify(templateParameters)
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
-  context: path.join(__dirname, '../src/renderer'),
+  context: path.join(__dirname, '../src'),
   entry: {
-    main: path.resolve(__dirname, '../src/renderer/index.tsx'),
+    main: path.resolve(__dirname, '../src/index.tsx'),
   },
   devtool: 'source-map',
   // https://webpack.js.org/configuration/stats/
@@ -92,7 +92,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /src\/renderer\/[^\s]+\.js$/i, // src/renderer 下所有js
+        test: /src\/[^\s]+\.js$/i, // src 下所有js
         use: ['babel-loader'],
         exclude: /node_modules/,
       },
@@ -134,7 +134,7 @@ module.exports = {
       PRODUCTION: process.env.NODE_ENV === 'production',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src/renderer/index.html'),
+      template: path.resolve(__dirname, '../src/index.html'),
       templateParameters: {
         ...templateParameters,
       },
@@ -151,7 +151,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src/renderer/'),
+      '@': path.resolve(__dirname, '../src/'),
     },
     // 支持Tsconfig paths
     plugins: [
