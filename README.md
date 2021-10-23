@@ -15,6 +15,8 @@
 
 ### 运行
 
+最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-typescript-webpack-template/)
+
 ![run](public/assets/img/run-demo.png)
 
 ## 环境
