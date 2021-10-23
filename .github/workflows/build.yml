@@ -1,0 +1,35 @@
+name: Build/release
+
+on:
+  push:
+    tags: # 当我们提交代码为tag 是以'v'开头的时候才会触发自动部署到服务端 如 git push tag v0.1.0
+      - 'v*'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.2.0'
+      - name: Restore Npm Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies && Build
+        working-directory: ./
+        run: |
+          npm install
+          npm run build
