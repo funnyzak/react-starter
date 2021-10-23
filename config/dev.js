@@ -5,8 +5,6 @@ const config = require('.')
 const webpackConfig = require('./webpack.config')
 
 function runServer() {
-  // webpackConfig.plugins.push(new DashboardPlugin())
-
   const compiler = webpack({
     ...webpackConfig,
   })
