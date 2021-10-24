@@ -6,12 +6,12 @@ const webpackConfig = require('./webpack.config');
 
 function runServer() {
   const compiler = webpack({
-    ...webpackConfig,
+    ...webpackConfig
   });
   const devServerOptions = {
     ...webpackConfig.devServer,
     ...config.devServiceConfig,
-    open: true,
+    open: true
   };
 
   const server = new WebpackDevServer(devServerOptions, compiler);
