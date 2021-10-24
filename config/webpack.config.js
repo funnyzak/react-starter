@@ -1,36 +1,36 @@
-const path = require('path')
-const Webpack = require('webpack')
+const path = require('path');
+const Webpack = require('webpack');
 
 // https://handlebarsjs.com/guide
-const Handlebars = require('handlebars')
+const Handlebars = require('handlebars');
 
 // https://www.webpackjs.com/plugins/html-webpack-plugin/
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // https://www.webpackjs.com/plugins/copy-webpack-plugin/
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // https://www.npmjs.com/package/tsconfig-paths-webpack-plugin
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 // https:// github.com/johnagan/clean-webpack-plugin
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // https://www.npmjs.com/package/webpack-bundle-analyzer
 // eslint-disable-next-line no-unused-vars
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 // https://www.npmjs.com/package/git-revision-webpack-plugin
-const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
+const { GitRevisionPlugin } = require('git-revision-webpack-plugin');
 
 const gitRevisionPlugin = new GitRevisionPlugin({
   branch: true,
-})
+});
 
-const package = require('../package.json')
-const config = require('.')
+const package = require('../package.json');
+const config = require('.');
 
 const gitInfo = {
   VERSION: gitRevisionPlugin.version(),
   COMMITHASH: gitRevisionPlugin.commithash(),
   BRANCH: gitRevisionPlugin.branch(),
   LASTCOMMITDATETIME: gitRevisionPlugin.lastcommitdatetime(),
-}
+};
 
 // 模板参数，应用 index.html、hbs文件
 const templateParameters = {
@@ -45,9 +45,9 @@ const templateParameters = {
   },
   // git信息
   gitInfo,
-}
+};
 
-templateParameters.origin = JSON.stringify(templateParameters)
+templateParameters.origin = JSON.stringify(templateParameters);
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
@@ -79,16 +79,16 @@ module.exports = {
         loader: 'html-loader',
         options: {
           preprocessor: (content, loaderContext) => {
-            let result
+            let result;
             try {
               result = Handlebars.compile(content)({
                 ...templateParameters,
-              })
+              });
             } catch (error) {
-              loaderContext.emitError(error)
-              return content
+              loaderContext.emitError(error);
+              return content;
             }
-            return result
+            return result;
           },
         },
       },
@@ -209,4 +209,4 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json', '.html'],
   },
   target: 'web',
-}
+};

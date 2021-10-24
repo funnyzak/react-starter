@@ -33,7 +33,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     'func-names': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -54,4 +55,4 @@ module.exports = {
       },
     ],
   },
-}
+};
