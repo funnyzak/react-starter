@@ -15,7 +15,9 @@
 
 ### 运行
 
-最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
+- 最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
+
+- 从这里下载最新Releases：[下载](https://github.com/funnyzak/react-quick-start/releases)
 
 ![run](public/_docs/assets/img/run-demo.jpg)
 
