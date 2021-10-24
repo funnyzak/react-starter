@@ -45,6 +45,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-use-before-define': 'off',
     'no-var-requires': 'off',
+    'quote-props': ['warn', 'consistent'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
