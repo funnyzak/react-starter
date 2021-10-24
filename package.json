@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-webpack-template",
+  "name": "react-quick-start",
   "version": "1.0.0",
-  "description": "react-typescript-webpack-template",
+  "description": "react-quick-start",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node ./config/dev.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/funnyzak/react-typescript-webpack-template.git"
+    "url": "git+https://github.com/funnyzak/react-quick-start.git"
   },
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   "author": "funnyzak <silenceace@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/funnyzak/react-typescript-webpack-template/issues"
+    "url": "https://github.com/funnyzak/react-quick-start/issues"
   },
-  "homepage": "https://github.com/funnyzak/react-typescript-webpack-template#readme",
+  "homepage": "https://github.com/funnyzak/react-quick-start#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

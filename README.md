@@ -1,10 +1,10 @@
-# Typescript Webpack React
+# React Quick Start
 
 ## 说明
 
 基于 Typescript Webpack 构建 React 应用脚手架。
 
--   babel 语法支持
+-   babel 支持
 -   typescript 支持
 -   react 支持
 -   sass 支持
@@ -15,7 +15,7 @@
 
 ### 运行
 
-最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-typescript-webpack-template/)
+最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
 
 ![run](public/assets/img/run-demo.png)
 
