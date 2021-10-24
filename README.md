@@ -13,7 +13,7 @@
 -   png|svg|jpg|jpeg|gif 引入支持
 -   git commit hooks, no 💩
 
-### 运行
+### 示例
 
 - 最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
 
