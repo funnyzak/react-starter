@@ -132,6 +132,7 @@ module.exports = {
     gitRevisionPlugin,
     // 打包时清理输出文件夹
     new CleanWebpackPlugin(),
+
     // 全局定义变量，可在代码里直接引用
     new Webpack.DefinePlugin({
       ...gitInfo,
@@ -146,8 +147,7 @@ module.exports = {
     }),
     // 复制public下资源到dist目录
     new CopyWebpackPlugin({
-      patterns:
-      [
+      patterns: [
         {
           context: 'public',
           from: '**/*',
@@ -157,7 +157,11 @@ module.exports = {
           globOptions: {
             dot: true,
             gitignore: true,
-            ignore: ['**/*.DS_Store', '**/public/_docs/**/*', '**/public/index.html'],
+            ignore: [
+              '**/*.DS_Store',
+              '**/public/_docs/**/*',
+              '**/public/index.html',
+            ],
           },
         },
       ],
