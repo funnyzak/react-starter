@@ -12,7 +12,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 // https:// github.com/johnagan/clean-webpack-plugin
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
+// https://www.npmjs.com/package/webpack-bundle-analyzer
+// eslint-disable-next-line no-unused-vars
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 // https://www.npmjs.com/package/git-revision-webpack-plugin
 const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
 
@@ -140,6 +142,10 @@ module.exports = {
 
   plugins: [
     gitRevisionPlugin,
+
+    // 页面大小分析
+    // new BundleAnalyzerPlugin(),
+
     // 打包时清理输出文件夹
     new CleanWebpackPlugin(),
 
