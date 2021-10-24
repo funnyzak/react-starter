@@ -113,6 +113,16 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    // https://webpack.docschina.org/plugins/split-chunks-plugin/
+    splitChunks: {
+      chunks: 'all',
+      minSize: 10000,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+    },
+  },
   output: {
     path: path.resolve(__dirname, `../${config.distOutPutPath}`),
     // assetModuleFilename: 'assets/[fullhash][ext][query]',
