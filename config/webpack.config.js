@@ -113,14 +113,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, `../${config.distOutPutPath}`),
-    // assetModuleFilename: 'assets/[hash][ext][query]',
+    // assetModuleFilename: 'assets/[fullhash][ext][query]',
 
     // entry file output name
-    filename: '[name].[git-revision-hash].bundle.js',
-    // filename: '[name].[hash].bundle.js',
+    // filename: '[name].[git-revision-hash].bundle.js',
+    filename: '[name].[fullhash:12].bundle.js',
 
     // un entey file output name
-    chunkFilename: '[id].chunk.js',
+    chunkFilename: '[id].[fullhash:12].chunk.js',
 
     // 该选项的值是以 runtime(运行时) 或 loader(载入时) 所创建的每个 URL 为前缀。因此，在多数情况下，此选项的值都会以 / 结束。
     publicPath: '', // 使用相对路径
@@ -141,24 +141,24 @@ module.exports = {
       },
     }),
     // 复制public下资源到dist目录
-    new CopyWebpackPlugin({
-      patterns:
-      [
-        {
-          context: 'public',
-          from: '**/*',
-          to: path.resolve(__dirname, `../${config.distOutPutPath}`),
-          force: true,
-          priority: 10,
-          globOptions: {
-            dot: true,
-            gitignore: true,
-            ignore: ['**/*.DS_Store', '**/public/_docs/**/*', '**/public/index.html'],
-          },
-        },
-      ],
-      options: { concurrency: 50 },
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns:
+    //   [
+    //     {
+    //       context: 'public',
+    //       from: '**/*',
+    //       to: path.resolve(__dirname, `../${config.distOutPutPath}`),
+    //       force: true,
+    //       priority: 10,
+    //       globOptions: {
+    //         dot: true,
+    //         gitignore: true,
+    //         ignore: ['**/*.DS_Store', '**/public/_docs/**/*', '**/public/index.html'],
+    //       },
+    //     },
+    //   ],
+    //   options: { concurrency: 50 },
+    // }),
   ],
   resolve: {
     alias: {
