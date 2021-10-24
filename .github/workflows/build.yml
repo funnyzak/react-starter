@@ -44,7 +44,7 @@ jobs:
           dest: ${{ env.DIST_ARCHIVE_NAME }}.zip
       - name: Release
         uses: softprops/action-gh-release@v1
-        # if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             ${{ env.DIST_ARCHIVE_NAME }}.zip
