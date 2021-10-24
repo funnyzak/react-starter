@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 // https://www.npmjs.com/package/tsconfig-paths-webpack-plugin
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+// https:// github.com/johnagan/clean-webpack-plugin
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // https://www.npmjs.com/package/git-revision-webpack-plugin
 const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
@@ -128,6 +130,8 @@ module.exports = {
 
   plugins: [
     gitRevisionPlugin,
+    // 打包时清理输出文件夹
+    new CleanWebpackPlugin(),
     // 全局定义变量，可在代码里直接引用
     new Webpack.DefinePlugin({
       ...gitInfo,

@@ -1,10 +1,5 @@
 const Webpack = require('webpack')
-const path = require('path')
-const { delDirPath } = require('./utils')
-
 const webpackConfig = require('./webpack.config')
-
-const config = require('.')
 
 // 不输出调试map
 delete webpackConfig.devtool
@@ -23,8 +18,6 @@ function buildBundle() {
 }
 
 function buildApp() {
-  delDirPath(path.resolve(__dirname, `../${config.distOutPutPath}`))
-
   Promise.all([buildBundle()]).then(() => {
     console.log('app build done.')
     process.exit()
