@@ -15,9 +15,9 @@
 
 ### 示例
 
-- 最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
+-   最新 Tags 自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
 
-- 从这里下载最新Releases：[下载](https://github.com/funnyzak/react-quick-start/releases)
+-   从这里下载最新 Releases：[下载](https://github.com/funnyzak/react-quick-start/releases)
 
 ![run](public/_docs/assets/img/run-demo.jpg)
 
@@ -51,6 +51,7 @@
 -   Lint 格式化：`npm run lint`
 -   构建：`npm run build`
 -
+
 ## 打包
 
 -   源构建输出：`./dist`

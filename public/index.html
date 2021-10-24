@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon shortcut" href="favicon.png" type="image/x-icon">
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-touch-fullscreen" content="yes">
-  <link rel="apple-touch-icon-precomposed" href="favicon.png" >
-  <meta name="format-detection" content="telephone=no,address=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="white">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="author" content="<%= package.author %>">
-  <meta name="build" content="<%= nowTimeString %>">
-  <meta name="version" content="<%= gitInfo.VERSION %>">
-  <meta name="branch" content="<%= gitInfo.BRANCH %>">
-  <meta name="hash" content="<%= gitInfo.COMMITHASH %>">
-  <title><%= package.name %>:<%= package.version %></title>
-</head>
-<body>
-  <div id="root"></div>
-</body>
+    <head>
+        <link rel="icon shortcut" href="favicon.png" type="image/x-icon" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta
+            content="width=device-width,initial-scale=1,user-scalable=no"
+            name="viewport"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <link rel="apple-touch-icon-precomposed" href="favicon.png" />
+        <meta name="format-detection" content="telephone=no,address=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="<%= package.author %>" />
+        <meta name="build" content="<%= nowTimeString %>" />
+        <meta name="version" content="<%= gitInfo.VERSION %>" />
+        <meta name="branch" content="<%= gitInfo.BRANCH %>" />
+        <meta name="hash" content="<%= gitInfo.COMMITHASH %>" />
+        <title><%= package.name %>:<%= package.version %></title>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
 </html>
