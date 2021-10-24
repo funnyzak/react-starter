@@ -141,24 +141,24 @@ module.exports = {
       },
     }),
     // 复制public下资源到dist目录
-    // new CopyWebpackPlugin({
-    //   patterns:
-    //   [
-    //     {
-    //       context: 'public',
-    //       from: '**/*',
-    //       to: path.resolve(__dirname, `../${config.distOutPutPath}`),
-    //       force: true,
-    //       priority: 10,
-    //       globOptions: {
-    //         dot: true,
-    //         gitignore: true,
-    //         ignore: ['**/*.DS_Store', '**/public/_docs/**/*', '**/public/index.html'],
-    //       },
-    //     },
-    //   ],
-    //   options: { concurrency: 50 },
-    // }),
+    new CopyWebpackPlugin({
+      patterns:
+      [
+        {
+          context: 'public',
+          from: '**/*',
+          to: path.resolve(__dirname, `../${config.distOutPutPath}`),
+          force: true,
+          priority: 10,
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: ['**/*.DS_Store', '**/public/_docs/**/*', '**/public/index.html'],
+          },
+        },
+      ],
+      options: { concurrency: 50 },
+    }),
   ],
   resolve: {
     alias: {
