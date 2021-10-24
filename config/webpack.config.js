@@ -46,6 +46,7 @@ const templateParameters = {
   // git信息
   gitInfo,
 }
+
 templateParameters.origin = JSON.stringify(templateParameters)
 
 module.exports = {
@@ -123,6 +124,14 @@ module.exports = {
       minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 10,
+          chunks: 'initial',
+        },
+      },
     },
   },
   output: {
@@ -143,8 +152,10 @@ module.exports = {
   plugins: [
     gitRevisionPlugin,
 
-    // 页面大小分析
-    // new BundleAnalyzerPlugin(),
+    // 只在开发时引入的插件
+    ...(process.env.NODE_ENV === 'development'
+      ? [new BundleAnalyzerPlugin()]
+      : []),
 
     // 打包时清理输出文件夹
     new CleanWebpackPlugin(),
