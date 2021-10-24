@@ -17,7 +17,7 @@
 
 最新Tags自动打包：[点这里打开](https://funnyzak.github.io/react-quick-start/)
 
-![run](public/assets/img/run-demo.png)
+![run](public/_docs/assets/img/run-demo.jpg)
 
 ## 环境
 
@@ -45,7 +45,7 @@
 
 执行：`yarn install` or `npm install`，然后：
 
--   开发环境：`npm run dev`
+-   开发启动`npm run serve`
 -   Lint 格式化：`npm run lint`
 -   构建：`npm run build`
 -

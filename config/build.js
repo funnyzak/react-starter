@@ -12,10 +12,11 @@ delete webpackConfig.devtool
 function buildBundle() {
   return new Promise((resolve, reject) => {
     const compiler = Webpack(webpackConfig)
-    compiler.watch({}, (err) => {
+    compiler.watch({}, (err, stats) => {
       if (err) {
         reject(err)
       }
+      console.log(stats)
       resolve()
     })
   })
@@ -25,7 +26,7 @@ function buildApp() {
   delDirPath(path.resolve(__dirname, `../${config.distOutPutPath}`))
 
   Promise.all([buildBundle()]).then(() => {
-    console.log('starting build your app')
+    console.log('app build done.')
     process.exit()
   })
 }

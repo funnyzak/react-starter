@@ -8,7 +8,6 @@ import hbsExample from './assets/source/example.hbs'
 
 const App = () => (
   <div>
-    <img src="./icon/128x128.png" alt="appliction icon" />
     <Image src={avatarImg} />
     <Hello name="TypeScript" enthusiasmLevel={3} />
     <div>{txtExample}</div>
