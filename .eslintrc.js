@@ -73,9 +73,10 @@ module.exports = {
     "no-duplicate-case": 2,//switch中的case标签不能重复
     "no-else-return": 2,//如果if语句里面有return,后面不能跟else语句
     'quote-props': ['warn', 'consistent'],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-use-before-define': ['warn'],
     'react/jsx-filename-extension': [
       'warn',
