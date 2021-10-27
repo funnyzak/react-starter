@@ -36,6 +36,12 @@
 - webpack: ^5.59.1
 - prettier: 2.4.1
 
+### UI/组件：
+
+- [antd](https://ant.design/docs/react/introduce-cn)
+- @ant-design/icons
+- [normalize.css](#)
+
 ## 目录
 
 - `public`：静态资源文件夹
@@ -50,7 +56,6 @@
 - 开发启动`npm run serve`
 - Lint 格式化：`npm run lint`
 - 构建：`npm run build`
--
 
 ## 打包
 
