@@ -53,7 +53,7 @@ module.exports = {
   mode: process.env.NODE_ENV || 'production',
   context: path.join(__dirname, '../'),
   entry: {
-    main: path.resolve(__dirname, '../src/index.tsx')
+    main: path.resolve(__dirname, '../src/Index.tsx')
   },
   devtool: 'source-map',
   // https://webpack.js.org/configuration/stats/
@@ -153,9 +153,9 @@ module.exports = {
     gitRevisionPlugin,
 
     // 只在开发时引入的插件
-    ...(process.env.NODE_ENV === 'development'
-      ? [new BundleAnalyzerPlugin()]
-      : []),
+    // ...(process.env.NODE_ENV === 'development'
+    //   ? [new BundleAnalyzerPlugin()]
+    //   : []),
 
     // 打包时清理输出文件夹
     new CleanWebpackPlugin(),
