@@ -1,2 +1,2 @@
-export { default as Hello } from './Hello/2Index';
-export { default as Image } from './Image/Index';
+export { default as Hello } from './Hello';
+export { default as Image } from './Image/ndex';
