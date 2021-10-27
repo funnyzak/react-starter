@@ -39,8 +39,9 @@
 ### UI/组件：
 
 - [antd](https://ant.design/docs/react/introduce-cn)
-- @ant-design/icons
-- [normalize.css](#)
+- [@ant-design/icons](https://ant.design/components/icon/)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [normalize.css](https://necolas.github.io/normalize.css/)
 
 ## 目录
 
