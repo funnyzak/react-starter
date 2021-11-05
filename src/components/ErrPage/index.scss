@@ -72,8 +72,12 @@
 
   .footer {
     text-align: center;
-    color: #e3e3e3;
+    color: #e3e3e3 !important;
     margin-bottom: 40px;
+    a {
+      color: #929191 !important;
+      text-decoration: underline;
+    }
   }
 
   .footer .logo {
@@ -82,7 +86,6 @@
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
-    -webkit-filter: grayscale(100%);
     filter: gray;
     filter: grayscale(100%);
   }

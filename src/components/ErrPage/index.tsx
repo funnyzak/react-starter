@@ -5,7 +5,7 @@ import './index.scss';
 interface IErrorPageProp {
   title?: string;
   description?: string;
-  urlPath?: string;
+  url?: string;
   statusCode?: number;
   message?: string;
 }
@@ -13,7 +13,7 @@ interface IErrorPageProp {
 const Index: React.FC<IErrorPageProp> = ({
   title,
   description,
-  urlPath,
+  url,
   statusCode,
   message
 }) => (
@@ -27,14 +27,11 @@ const Index: React.FC<IErrorPageProp> = ({
       <h1>{title}</h1>
       <div className="error-detail">
         <p>{description}</p>
+        <b>{url ? new URL(url).pathname : ''}</b>
         <p>
           <br />
         </p>
-        <p>描述：</p>
-        <li>
-          路径：
-          {urlPath}
-        </li>
+        <p>错误描述：</p>
         <li>
           状态码：
           {statusCode}
@@ -50,14 +47,15 @@ const Index: React.FC<IErrorPageProp> = ({
       <br />
       Generated
       {new Date().toString()}
+      {' '}
+      {url && url.length > 0 ? <a href={url}>重试</a> : null}
     </div>
   </div>
 );
 
 Index.defaultProps = {
-  title: '访问出错',
-  description: '您的请求目前无法完成',
-  urlPath: '',
+  title: '访问遇到问题',
+  description: '您当前的请求暂无法完成',
   statusCode: 404,
   message: 'Not Found'
 };
