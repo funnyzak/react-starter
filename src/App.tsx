@@ -1,28 +1,7 @@
-import { Avatar, ConfigProvider } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
-import { FaBeer } from 'react-icons/fa';
-import zhCN from 'antd/lib/locale/zh_CN';
-import { Hello, Image } from './components';
-import avatarImg from './assets/img/avatar.png';
-import txtExample from './assets/source/example.txt';
-import hbsExample from './assets/source/example.hbs';
+import { useRoutes } from 'react-router-dom';
+import routers from './routers';
 
-export default () => (
-  <ConfigProvider direction="ltr" locale={zhCN}>
-    <div>
-      <Image src={avatarImg} />
-      <Avatar size={64} icon={<UserOutlined />} />
-      <h3>
-        {' '}
-        Lets go for a
-        {' '}
-        <FaBeer />
-        ?
-        {' '}
-      </h3>
-      <Hello name="TypeScript" enthusiasmLevel={3} />
-      <div>{txtExample}</div>
-      <div dangerouslySetInnerHTML={{ __html: hbsExample }} />
-    </div>
-  </ConfigProvider>
-);
+export default () => {
+  const elements = useRoutes(routers);
+  return <>{elements}</>;
+};

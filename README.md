@@ -4,6 +4,7 @@
 
 基于 Typescript Webpack 构建 React 应用脚手架。
 
+- react router 支持
 - babel 支持
 - typescript 支持
 - react 支持
@@ -35,6 +36,8 @@
 - typescript: ^4.4.4
 - webpack: ^5.59.1
 - prettier: 2.4.1
+- react router: ^6.0.0
+- react-router-dom: ^6.0.0
 
 ### UI/组件：
 

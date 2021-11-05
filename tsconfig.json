@@ -47,7 +47,7 @@
     // Strips all comments from TypeScript files when converting into JavaScript.
     "removeComments": true,
     // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
-    "module": "es2015",
+    "module": "esnext",
     /* Module Resolution Options */
     // 用于选择模块解析策略，有'node'和'classic'两种类型
     "moduleResolution": "node",
@@ -61,19 +61,10 @@
        对于 --target ES5: DOM,ES5,ScriptHost
        对于 --target ES6: DOM,ES6,DOM.Iterable,ScriptHost
        TS 绝不会在您的代码中注入polyfill,所以需要你自己制定编译lib */
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/package": [
-        "./package.json"
-      ]
+      "@/*": ["./src/*"],
+      "@/package": ["./package.json"]
     }
   },
   "exclude": [
