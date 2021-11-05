@@ -7,8 +7,6 @@ import '../styles/App.less';
 
 export default () => (
   <ConfigProvider direction="ltr" locale={zhCN}>
-    <>
-      <Outlet />
-    </>
+    <Outlet />
   </ConfigProvider>
 );
