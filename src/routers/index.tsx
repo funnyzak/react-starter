@@ -20,11 +20,11 @@ export const mainRoutes: RouteObject[] = [
     children: [
       { index: true, element: <Home /> },
       {
-        path: '/about',
+        path: 'about',
         element: <About />
       },
       {
-        path: '/article/:id',
+        path: 'article/:id',
         element: <Article />
       }
     ]
