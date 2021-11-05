@@ -1,1 +1,7 @@
-export default () => <div> error.</div>;
+import { ErrorPage } from '@/components';
+
+export default () => (
+  <>
+    <ErrorPage />
+  </>
+);
