@@ -16,7 +16,9 @@ export default () => (
     <dl>
       <dt>Routes</dt>
       <dd>
-        <Link to="/error">Error Page</Link>
+        <Link to="/error?title=您的访问无法完成&statusCode=403">
+          Error Page
+        </Link>
       </dd>
       <dd>
         <Link to="/about">About</Link>
