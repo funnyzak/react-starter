@@ -5,6 +5,7 @@
 基于 Typescript Webpack 构建 React 应用脚手架。
 
 - react router 支持
+- redux 支持
 - babel 支持
 - typescript 支持
 - react 支持
