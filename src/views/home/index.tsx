@@ -12,19 +12,21 @@ export default () => (
     <Image src={avatarImg} />
     <Avatar size={64} icon={<UserOutlined />} />
     <br />
-    <br />
     <dl>
       <dt>Routes</dt>
       <dd>
-        <Link to="/error?title=您的访问无法完成&statusCode=403">
-          Error Page
-        </Link>
+        <Link to="/user">User</Link>
       </dd>
       <dd>
         <Link to="/about">About</Link>
       </dd>
       <dd>
         <Link to="/article/1">Article</Link>
+      </dd>
+      <dd>
+        <Link to="/error?title=您的访问无法完成&statusCode=403">
+          Error Page
+        </Link>
       </dd>
     </dl>
     <h3>

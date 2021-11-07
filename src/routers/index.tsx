@@ -5,6 +5,7 @@ import Layout from '@/layout';
 import Home from '@/views/home';
 import About from '@/views/about';
 import Article from '@/views/article';
+import User from '@/views/user';
 
 export const constantRoutes: RouteObject[] = [
   {
@@ -24,6 +25,10 @@ export const mainRoutes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
+      {
+        path: 'user',
+        element: <User />
+      },
       {
         path: 'about',
         element: <About />
