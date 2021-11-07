@@ -10,6 +10,11 @@ export const constantRoutes: RouteObject[] = [
   {
     path: '/error',
     element: <ErrorPage />
+  },
+  {
+    // 没有的页面404
+    path: '*',
+    element: <ErrorPage />
   }
 ];
 

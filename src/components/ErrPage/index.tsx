@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.scss';
 
-interface IErrorPageProp {
+export interface IErrorPageProp {
   title?: string;
   description?: string;
   url?: string;
