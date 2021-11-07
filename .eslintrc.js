@@ -109,6 +109,8 @@ module.exports = {
     "@emotion/import-from-emotion": "off",
     "@emotion/styled-import": "warn",
     "react/jsx-uses-react": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
