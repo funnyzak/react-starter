@@ -102,8 +102,9 @@ module.exports = {
     }, {
         "enforceForRenamedProperties": false
       }],
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-shadow": "error",
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-var-requires': 'off',
     "@emotion/jsx-import": "off",
     "@emotion/no-vanilla": "warn",
     "@emotion/import-from-emotion": "off",
